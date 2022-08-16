@@ -1,5 +1,5 @@
-name=More Traits
-poster=generic.png
+name=More Traits (10 Years Later Hotfix)
+poster=poster.png
 versionMin=41.0
-description= Adds additional traits to the game to offer more balanced variety for character creation.
-id=ToadTraits
+description=Adds some hotfixes meant to be used in relation with the 10 Years Later Mod.
+id=MoreTraits10YearsLater
