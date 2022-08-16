@@ -9,7 +9,7 @@ MoreTraits.settings.SuperImmuneAnnounce = false;
 MoreTraits.settings.GourmandAnnounce = false;
 MoreTraits.settings.AlbinoAnnounce = true;
 MoreTraits.settings.MartialDamage = false;
-MoreTraits.settings.VagabondAnnounce = false;
+--MoreTraits.settings.VagabondAnnounce = false;
 MoreTraits.settings.HardyNotifier = false;
 
 if ModOptions and ModOptions.getInstance then
@@ -22,7 +22,7 @@ if ModOptions and ModOptions.getInstance then
         MoreTraits.settings.GourmandAnnounce = optionValues.settings.options.GourmandAnnounce;
         MoreTraits.settings.AlbinoAnnounce = optionValues.settings.options.AlbinoAnnounce;
         MoreTraits.settings.MartialDamage = optionValues.settings.options.MartialDamage;
-        MoreTraits.settings.VagabondAnnounce = optionValues.settings.options.VagabondAnnounce;
+        --MoreTraits.settings.VagabondAnnounce = optionValues.settings.options.VagabondAnnounce;
 		MoreTraits.settings.HardyNotifier = optionValues.settings.options.HardyNotifier;
     end
     local SETTINGS = {
@@ -49,13 +49,14 @@ if ModOptions and ModOptions.getInstance then
                 OnApplyMainMenu = onModOptionsApply,
                 OnApplyInGame = onModOptionsApply,
             },
+            --[[
             VagabondAnnounce = {
                 name = "UI_MoreTraits_Options_VagabondAnnounce",
                 tooltip = "UI_MoreTraits_Options_VagabondAnnounce_ToolTip",
                 default = false,
                 OnApplyMainMenu = onModOptionsApply,
                 OnApplyInGame = onModOptionsApply,
-            },
+            },]]
             GraveRobberAnnounce = {
                 name = "UI_MoreTraits_Options_GraveRobberAnnounce",
                 tooltip = "UI_MoreTraits_Options_GraveRobberAnnounce_ToolTip",

@@ -26,6 +26,7 @@ MoreTraitsSkills = {
             ["JunkWeapons"] = 5,
         },
     },
+    --[[
     vagabond = {
         name = "vagabond",
         type = "trait",
@@ -36,7 +37,7 @@ MoreTraitsSkills = {
             ["MedicinalPlants"] = 5,
             ["Trash"] = 10,
         },
-    },
+    },]]
     wildsman = {
         name = "wildsman",
         type = "trait",

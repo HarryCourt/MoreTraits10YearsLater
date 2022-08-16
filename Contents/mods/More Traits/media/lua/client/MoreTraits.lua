@@ -375,11 +375,11 @@ function initToadTraitsPerks(_player)
     playerdata.HasSlept = false;
     playerdata.FatigueWhenSleeping = 0;
     playerdata.NeckHadPain = false;
-    playerdata.VagabondIllegal = false;
+    playerdata.VagabondIllegal = true; -- I don't know if this will work.
     playerdata.ScroungerIllegal = false;
-    playerdata.ImmunoActivated = false;
-    playerdata.ImmunoEvasiveTimer = 0;
-    playerdata.ImmunoFinal = false;
+    --playerdata.ImmunoActivated = false;
+    --playerdata.ImmunoEvasiveTimer = 0;
+    --playerdata.ImmunoFinal = false;
     playerdata.AlbinoTimeSpentOutside = 0;
 
     if player:HasTrait("Lucky") then
@@ -462,7 +462,7 @@ function initToadTraitsPerks(_player)
         bodydamage:setInfectionLevel(0);
         table.insert(BodyDamagedFromTrait, bodydamage:getBodyPart(BodyPartType.LowerLeg_R));
     end
-    if player:HasTrait("burned") then
+    --[[if player:HasTrait("burned") then
         local bodydamage = player:getBodyDamage();
         for i = 0, bodydamage:getBodyParts():size() - 1 do
             local b = bodydamage:getBodyParts():get(i);
@@ -472,7 +472,7 @@ function initToadTraitsPerks(_player)
             b:setBandaged(true, ZombRand(1, 10) + bandagestrength, true, "Base.AlcoholBandage");
             table.insert(BodyDamagedFromTrait, b); --i forgor to add in the thing for burned, but i think this should work fine
         end
-    end
+    end--]]
     playerdata.ToadTraitBodyDamage = nil;
     suspendevasive = false;
     player:getBodyDamage():Update();
@@ -1064,28 +1064,6 @@ end
 
 function ToadTraitVagabond(_iSInventoryPage, _state, _player)
     local items = {};
-    table.insert(items, "Base.BreadSlices");
-    table.insert(items, "Base.Pizza");
-    table.insert(items, "Base.Hotdog");
-    table.insert(items, "Base.Corndog");
-    table.insert(items, "Base.OpenBeans");
-    table.insert(items, "Base.CannedChiliOpen");
-    table.insert(items, "Base.WatermelonSmashed");
-    table.insert(items, "Base.DogfoodOpen");
-    table.insert(items, "Base.CannedCornedBeefOpen");
-    table.insert(items, "Base.CannedBologneseOpen");
-    table.insert(items, "Base.CannedCarrotsOpen");
-    table.insert(items, "Base.CannedCornOpen");
-    table.insert(items, "Base.CannedMushroomSoupOpen");
-    table.insert(items, "Base.CannedPeasOpen");
-    table.insert(items, "Base.CannedPotatoOpen");
-    table.insert(items, "Base.CannedSardinesOpen");
-    table.insert(items, "Base.CannedTomatoOpen");
-    table.insert(items, "Base.TinnedSoupOpen");
-    table.insert(items, "Base.TunaTinOpen");
-    table.insert(items, "Base.CannedFruitCocktailOpen");
-    table.insert(items, "Base.CannedPeachesOpen");
-    table.insert(items, "Base.CannedPineappleOpen");
     table.insert(items, "Base.MushroomGeneric1");
     table.insert(items, "Base.MushroomGeneric2");
     table.insert(items, "Base.MushroomGeneric3");
@@ -1093,6 +1071,14 @@ function ToadTraitVagabond(_iSInventoryPage, _state, _player)
     table.insert(items, "Base.MushroomGeneric5");
     table.insert(items, "Base.MushroomGeneric6");
     table.insert(items, "Base.MushroomGeneric7");
+    table.insert(items, "Base.Matches");
+    table.insert(items, "Base.Newspaper");
+    table.insert(items, "Base.DeadMouse");
+    table.insert(items, "Base.DeadRat");
+    table.insert(items, "Base.DenimStripsDirty");
+    table.insert(items, "Base.LeatherStripsDirty");
+    table.insert(items, "Base.RippedSheetsDirty");
+    
 
     local length = 0
     for k, v in pairs(items) do
@@ -2632,6 +2618,7 @@ local function SuperImmuneFakeInfectionHealthLoss(player)
     end
 end
 
+--[[
 function Immunocompromised(_player, _playerdata)
     local player = _player;
     local playerdata = _playerdata;
@@ -2647,6 +2634,7 @@ function Immunocompromised(_player, _playerdata)
         end
     end
 end
+--]]
 
 function checkWeight()
     local player = getPlayer();
@@ -3820,6 +3808,7 @@ local function HungerCheck(player)
     end
 end
 
+--[[
 local function ImmunocompromisedInfection(player, playerdata)
     local bodydamage = player:getBodyDamage();
     local isinfected = bodydamage:isInfected();
@@ -3890,6 +3879,8 @@ local function ImmunocompromisedInfection(player, playerdata)
         end
     end
 end
+--]]
+
 
 --[[local function TerminatorGun(player, playerdata)
 	local state = "Normal";
@@ -3940,7 +3931,7 @@ function MainPlayerUpdate(_player)
         FearfulUpdate(player);
     elseif internalTick == 10 then
         SuperImmune(player, playerdata);
-        Immunocompromised(player, playerdata);
+        --Immunocompromised(player, playerdata);
     end
     MotionSickness(player);
     MotionSicknessHealthLoss(player);
@@ -3959,7 +3950,7 @@ function MainPlayerUpdate(_player)
     QuickWorker(player);
     SlowWorker(player);
     SuperImmuneFakeInfectionHealthLoss(player);
-    ImmunocompromisedInfection(player, playerdata);
+    --ImmunocompromisedInfection(player, playerdata);
     --TerminatorGun(player, playerdata);
     if suspendevasive == false then
         ToadTraitEvasive(player, playerdata);
