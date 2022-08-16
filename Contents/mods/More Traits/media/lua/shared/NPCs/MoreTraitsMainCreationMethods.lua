@@ -176,7 +176,7 @@ local function initToadTraits()
     end
     --local superimmune = TraitFactory.addTrait("superimmune", getText("UI_trait_superimmune"), 16, getText("UI_trait_superimmunedesc"), false, false);
     local packmule = TraitFactory.addTrait("packmule", getText("UI_trait_packmule"), 7, getText("UI_trait_packmuledesc"), false, false);
-    --local graverobber = TraitFactory.addTrait("graverobber", getText("UI_trait_graverobber"), 7, getText("UI_trait_graverobberdesc"), false, false);
+    local graverobber = TraitFactory.addTrait("graverobber", getText("UI_trait_graverobber"), 8, getText("UI_trait_graverobberdesc"), false, false);
     local gourmand = TraitFactory.addTrait("gourmand", getText("UI_trait_gourmand"), 4, getText("UI_trait_gourmanddesc"), false, false);
     gourmand:addXPBoost(Perks.Cooking, 1);
     local gymgoer = TraitFactory.addTrait("gymgoer", getText("UI_trait_gymgoer"), 5, getText("UI_trait_gymgoerdesc"), false, false);
