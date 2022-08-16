@@ -39,7 +39,7 @@ local function tablelength(T)
         end
     else
         count = 1
-    endEN
+    end
     return count
 end
 
@@ -2708,8 +2708,7 @@ function graveRobber(_zombie)
                 local roll = ZombRand(0, 101);
 
                 if roll <= 20 then
-                    local randomitem = { "Base.Lunchbox", "Base.Lunchbox2", "Base.Earbuds", "Base.Lighter", "Base.Padlock", "Base.Woodglue", "Base.DuctTape", "Base.Rope", 
-                    "Base.Newspaper" };
+                    local randomitem = { "Base.Lunchbox", "Base.Lunchbox2", "Base.Earbuds", "Base.Lighter", "Base.Padlock", "Base.Woodglue", "Base.DuctTape", "Base.Rope", "Base.Newspaper" };
                     inv:addItemOnServer(inv:AddItem(randomitem[ZombRand(tablelength(randomitem)) + 1]));
                 elseif roll <= 40 then
                     local randomitem = {"Base.CandyPackage", "Base.Smallanimalmeat", "Base.Crisps"};

@@ -335,20 +335,20 @@ local function initToadTraits()
 	 --Prevent the player from getting above the sneak level required to lose conspicuous
 		TraitFactory.setMutualExclusive("noxpsneaky", "Conspicuous");
     end
-    TraitFactory.setMutualExclusive("Resilient", "superimmune");
-    TraitFactory.setMutualExclusive("Resilient", "immunocompromised");
-    TraitFactory.setMutualExclusive("superimmune", "immunocompromised");
-    TraitFactory.setMutualExclusive("ProneToIllness", "superimmune");
+    --TraitFactory.setMutualExclusive("Resilient", "superimmune");
+    --TraitFactory.setMutualExclusive("Resilient", "immunocompromised");
+    --TraitFactory.setMutualExclusive("superimmune", "immunocompromised");
+    --TraitFactory.setMutualExclusive("ProneToIllness", "superimmune");
     TraitFactory.setMutualExclusive("packmule", "packmouse");
     TraitFactory.setMutualExclusive("gourmand", "ascetic");
     TraitFactory.setMutualExclusive("fearful", "Desensitized");
     TraitFactory.setMutualExclusive("fearful", "Brave");
     TraitFactory.setMutualExclusive("blissful", "Smoker");
     TraitFactory.setMutualExclusive("quickworker", "slowworker");
-    TraitFactory.setMutualExclusive("burned", "broke");
-    TraitFactory.setMutualExclusive("burned", "injured");
+    --TraitFactory.setMutualExclusive("burned", "broke");
+    --TraitFactory.setMutualExclusive("burned", "injured");
 	TraitFactory.setMutualExclusive("restfulsleeper", "Insomniac");
-	TraitFactory.setMutualExclusive("motionsickness", "superimmune");
+	--TraitFactory.setMutualExclusive("motionsickness", "superimmune");
     --TraitFactory.setMutualExclusive("gimp", "fast");
     --TraitFactory.setMutualExclusive("blissful", "Brooding");
     TraitFactory.sortList();
