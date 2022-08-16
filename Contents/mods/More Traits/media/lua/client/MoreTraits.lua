@@ -39,7 +39,7 @@ local function tablelength(T)
         end
     else
         count = 1
-    end
+    endEN
     return count
 end
 
@@ -1078,6 +1078,7 @@ function ToadTraitVagabond(_iSInventoryPage, _state, _player)
     table.insert(items, "Base.DenimStripsDirty");
     table.insert(items, "Base.LeatherStripsDirty");
     table.insert(items, "Base.RippedSheetsDirty");
+    table.insert(items, "Base.Cigarettes");
     
 
     local length = 0
@@ -2667,7 +2668,7 @@ function checkWeight()
         ;
     end
 end
-
+--[[
 function graveRobber(_zombie)
     local player = getPlayer();
     local zombie = _zombie;
@@ -2767,7 +2768,7 @@ function graveRobber(_zombie)
         end
     end
 
-end
+end]]
 
 function Gourmand(_iSInventoryPage, _state, _player)
     local player = _player;

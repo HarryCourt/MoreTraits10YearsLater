@@ -153,7 +153,7 @@ local function initToadTraits()
     end
     local gordanite = TraitFactory.addTrait("gordanite", getText("UI_trait_gordanite"), 6, getText("UI_trait_gordanitedesc"), false, false);
     gordanite:addXPBoost(Perks.Blunt, 1);
-    local indefatigable = TraitFactory.addTrait("indefatigable", getText("UI_trait_indefatigable"), 10, getText("UI_trait_indefatigabledesc"), false, false);
+    --local indefatigable = TraitFactory.addTrait("indefatigable", getText("UI_trait_indefatigable"), 10, getText("UI_trait_indefatigabledesc"), false, false);
     local hardy = TraitFactory.addTrait("hardy", getText("UI_trait_hardy"), 5, getText("UI_trait_hardydesc"), false, false);
     hardy:addXPBoost(Perks.Fitness, 1);
     local bluntperk = TraitFactory.addTrait("problunt", getText("UI_trait_problunt"), 7, getText("UI_trait_probluntdesc"), false, false);
@@ -174,9 +174,9 @@ local function initToadTraits()
     if getActivatedMods():contains("DrivingSkill") == false then
         local expertdriver = TraitFactory.addTrait("expertdriver", getText("UI_trait_expertdriver"), 5, getText("UI_trait_expertdriverdesc"), false, false);
     end
-    local superimmune = TraitFactory.addTrait("superimmune", getText("UI_trait_superimmune"), 10, getText("UI_trait_superimmunedesc"), false, false);
+    --local superimmune = TraitFactory.addTrait("superimmune", getText("UI_trait_superimmune"), 16, getText("UI_trait_superimmunedesc"), false, false);
     local packmule = TraitFactory.addTrait("packmule", getText("UI_trait_packmule"), 7, getText("UI_trait_packmuledesc"), false, false);
-    local graverobber = TraitFactory.addTrait("graverobber", getText("UI_trait_graverobber"), 7, getText("UI_trait_graverobberdesc"), false, false);
+    --local graverobber = TraitFactory.addTrait("graverobber", getText("UI_trait_graverobber"), 7, getText("UI_trait_graverobberdesc"), false, false);
     local gourmand = TraitFactory.addTrait("gourmand", getText("UI_trait_gourmand"), 4, getText("UI_trait_gourmanddesc"), false, false);
     gourmand:addXPBoost(Perks.Cooking, 1);
     local gymgoer = TraitFactory.addTrait("gymgoer", getText("UI_trait_gymgoer"), 5, getText("UI_trait_gymgoerdesc"), false, false);
@@ -188,8 +188,8 @@ local function initToadTraits()
     local batteringram = TraitFactory.addTrait("batteringram", getText("UI_trait_batteringram"), 7, getText("UI_trait_batteringramdesc"), false, false);
     local fitted = TraitFactory.addTrait("fitted", getText("UI_trait_fitted"), 4, getText("UI_trait_fitteddesc"), false, false);
     local tavernbrawler = TraitFactory.addTrait("tavernbrawler", getText("UI_trait_tavernbrawler"), 3, getText("UI_trait_tavernbrawlerdesc"), false, false);
-    local secondwind = TraitFactory.addTrait("secondwind", getText("UI_trait_secondwind"), 10, getText("UI_trait_secondwinddesc"), false, false);
-    secondwind:addXPBoost(Perks.Fitness, 1);
+    --local secondwind = TraitFactory.addTrait("secondwind", getText("UI_trait_secondwind"), 10, getText("UI_trait_secondwinddesc"), false, false);
+    --secondwind:addXPBoost(Perks.Fitness, 1);
 	local restfulsleeper = TraitFactory.addTrait("restfulsleeper", getText("UI_trait_restfulsleeper"), 6, getText("UI_trait_restfulsleeperdesc"), false, false);
 	local noxpshooter = TraitFactory.addTrait("noxpshooter", getText("UI_trait_noxpshooter"), 3, getText("UI_trait_noxpshooterdesc"), false, false);
 	local noxptechnician = TraitFactory.addTrait("noxptechnician", getText("UI_trait_noxptechnician"), 3, getText("UI_trait_noxptechniciandesc"), false, false);
@@ -201,7 +201,7 @@ local function initToadTraits()
     --Bad Traits--
     --===========--
     local noodlelegs = TraitFactory.addTrait("noodlelegs", getText("UI_trait_noodlelegs"),  -6, getText("UI_trait_noodlelegsdesc"), false, false);
-    local motionsickness = TraitFactory.addTrait("motionsickness", getText("UI_trait_motionsickness"), -6, getText("UI_trait_motionsicknessdesc"), false, false);
+    --local motionsickness = TraitFactory.addTrait("motionsickness", getText("UI_trait_motionsickness"), -6, getText("UI_trait_motionsicknessdesc"), false, false);
     local paranoia = TraitFactory.addTrait("paranoia", getText("UI_trait_paranoia"), -4, getText("UI_trait_paranoiadesc"), false, false);
     local packmouse = TraitFactory.addTrait("packmouse", getText("UI_trait_packmouse"), -7, getText("UI_trait_packmousedesc"), false, false);
     local injured = TraitFactory.addTrait("injured", getText("UI_trait_injured"), -4, getText("UI_trait_injureddesc"), false, false);
@@ -223,17 +223,17 @@ local function initToadTraits()
         local amputee = TraitFactory.addTrait("amputee", getText("UI_trait_amputee"), -16, getText("UI_trait_amputeedesc"), false, false);
     end
     if getActivatedMods():contains("DrivingSkill") == false then
-        local poordriver = TraitFactory.addTrait("poordriver", getText("UI_trait_poordriver"), -5, getText("UI_trait_poordriverdesc"), false, false);
+        --local poordriver = TraitFactory.addTrait("poordriver", getText("UI_trait_poordriver"), -5, getText("UI_trait_poordriverdesc"), false, false);
     end
     --  local gimp = TraitFactory.addTrait("gimp", getText("UI_trait_gimp"), -8, getText("UI_trait_gimpdesc"), false, false);
     local anemic = TraitFactory.addTrait("anemic", getText("UI_trait_anemic"), -4, getText("UI_trait_anemicdesc"), false, false);
-    local immunocompromised = TraitFactory.addTrait("immunocompromised", getText("UI_trait_immunocompromised"), -10, getText("UI_trait_immunocompromiseddesc"), false, false);
+    --local immunocompromised = TraitFactory.addTrait("immunocompromised", getText("UI_trait_immunocompromised"), -10, getText("UI_trait_immunocompromiseddesc"), false, false);
     local ascetic = TraitFactory.addTrait("ascetic", getText("UI_trait_ascetic"), -4, getText("UI_trait_asceticdesc"), false, false);
     local fearful = TraitFactory.addTrait("fearful", getText("UI_trait_fearful"), -7, getText("UI_trait_fearfuldesc"), false, false);
     local glassbody = TraitFactory.addTrait("glassbody", getText("UI_trait_glassbody"), -10, getText("UI_trait_glassbodydesc"), false, false);
     local slowworker = TraitFactory.addTrait("slowworker", getText("UI_trait_slowworker"), -9, getText("UI_trait_slowworkerdesc"), false, false);
     local mundane = TraitFactory.addTrait("mundane", getText("UI_trait_mundane"), -9, getText("UI_trait_mundanedesc"), false, false);
-    local burned = TraitFactory.addTrait("burned", getText("UI_trait_burned"), -18, getText("UI_trait_burneddesc"), false, false);
+    --local burned = TraitFactory.addTrait("burned", getText("UI_trait_burned"), -18, getText("UI_trait_burneddesc"), false, false);
     local deprived = TraitFactory.addTrait("deprived", getText("UI_trait_deprived"), -6, getText("UI_trait_depriveddesc"), false, false);
     --Exclusives
     if getActivatedMods():contains("ToadTraitsDisablePrepared") == false then
@@ -334,10 +334,6 @@ local function initToadTraits()
 	else
 	 --Prevent the player from getting above the sneak level required to lose conspicuous
 		TraitFactory.setMutualExclusive("noxpsneaky", "Conspicuous");
-    end
-    if getActivatedMods():contains("DrivingSkill") == false then
-        TraitFactory.setMutualExclusive("expertdriver", "poordriver");
-	TraitFactory.setMutualExclusive("motionsickness", "expertdriver");
     end
     TraitFactory.setMutualExclusive("Resilient", "superimmune");
     TraitFactory.setMutualExclusive("Resilient", "immunocompromised");
