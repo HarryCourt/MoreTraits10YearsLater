@@ -100,6 +100,16 @@ option MoreTraits.ButterfingersChance
 	type = integer, min = 100, max = 10000, default = 2000,
 	page = MoreTraits, translation = MoreTraits_ButterfingersChance,
 }
+option MoreTraits.GraveRobberChance
+{
+	type = integer, min = 1, max = 1000, default = 10,
+	page = MoreTraits, translation = MoreTraits_GraveRobberChance,
+}
+option MoreTraits.GraveRobberGuaranteedLoot
+{
+	type = integer, min = 0, max = 10, default = 1,
+	page = MoreTraits, translation = MoreTraits_GraveRobberGuaranteedLoot,
+}
 option MoreTraits.ScroungerChance
 {
 	type = integer, min = 1, max = 100, default = 20,
