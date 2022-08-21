@@ -2,9 +2,14 @@ require('NPCs/MainCreationMethods');
 
 local function initToadTraits()
     local gunspecialist = TraitFactory.addTrait("gunspecialist", getText("UI_trait_gunspecialist"), 8, getText("UI_trait_gunspecialistdesc"), false, false);
+
+    local preparedLimit = 0;
+
     gunspecialist:addXPBoost(Perks.Aiming, 2);
     gunspecialist:addXPBoost(Perks.Reloading, 2);
     if getActivatedMods():contains("ToadTraitsDisablePrepared") == false then
+        
+
         local preparedfood = TraitFactory.addTrait("preparedfood", getText("UI_trait_preparedfood"), 1, getText("UI_trait_preparedfooddesc"), false, false);
         local preparedammo = TraitFactory.addTrait("preparedammo", getText("UI_trait_preparedammo"), 1, getText("UI_trait_preparedammodesc"), false, false);
         local preparedmedical = TraitFactory.addTrait("preparedmedical", getText("UI_trait_preparedmedical"), 1, getText("UI_trait_preparedmedicaldesc"), false, false);
@@ -236,7 +241,8 @@ local function initToadTraits()
     --local burned = TraitFactory.addTrait("burned", getText("UI_trait_burned"), -18, getText("UI_trait_burneddesc"), false, false);
     local deprived = TraitFactory.addTrait("deprived", getText("UI_trait_deprived"), -6, getText("UI_trait_depriveddesc"), false, false);
     --Exclusives
-    if getActivatedMods():contains("ToadTraitsDisablePrepared") == false then
+    if preparedLimit < SandboxVars.MoreTraits.PreparedAmountLimit then
+    --if getActivatedMods():contains("ToadTraitsDisablePrepared") == false then
         TraitFactory.setMutualExclusive("preparedfood", "preparedammo");
         TraitFactory.setMutualExclusive("preparedfood", "preparedrepair");
         TraitFactory.setMutualExclusive("preparedfood", "preparedmedical");

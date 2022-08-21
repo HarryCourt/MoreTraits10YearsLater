@@ -1,5 +1,11 @@
 VERSION = 1,
 
+option MoreTraits.PreparedAmountLimit
+{
+	type = integer, min = 1, max = 9, default = 1,
+	page = MoreTraits, translation = MoreTraits_PreparedAmountLimit,
+}
+
 option MoreTraits.PreparedMedicalBandageAmount
 {
 	type = integer, min = 1, max = 999, default = 4,
